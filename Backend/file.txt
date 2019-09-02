@@ -1,0 +1,4 @@
+1.  To check if agent credit point 100 then get a leble1 and extra bonus point.
+   @route  POST api/admin/customer/loanApprovedComplete/:id
+    line: 119
+

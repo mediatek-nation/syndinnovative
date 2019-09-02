@@ -1,0 +1,207 @@
+
+const DashboardStack = createStackNavigator({
+  Dashboard:{ screen: Dashboard,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Dashboard',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  Products:{ screen: Products,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Loans & Policies',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  Profile:{ screen: Profile,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Profile',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  CompletedCustomers:{ screen: CompletedCustomers,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Approved Customers',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  PendingCustomers:{ screen: PendingCustomers,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Pending Customers',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  CreditPoint:{ screen: CreditPoint,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Credit Point',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  Customer:{ screen: Customer,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'View Customer',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  Product:{ screen: Product,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'View Product',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  CashHistory:{ screen: CashHistory}
+})
+
+const ProfileStack = createStackNavigator({
+  Profile:{ screen: Profile,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Profile',
+        headerLeft:(
+          <Ionicons style={{marginLeft:20}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+})
+const AddCustomerDetailsStack = createStackNavigator({
+  AddCustomerDetails:{ screen: AddCustomerDetails,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Customer Details',
+        headerLeft:(
+          <Ionicons style={{marginLeft:20}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+})
+const PendingCustomersStack = createStackNavigator({
+  PendingCustomers:{ screen: PendingCustomers,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Pending Customer',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  SingleCustomer:{ screen: SingleCustomer,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Customer Info',
+      }
+    }
+  }
+})
+
+const CompletedCustomersStack = createStackNavigator({
+  CompletedCustomers:{ screen: CompletedCustomers,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Completed Customer',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+  SingleCustomer:{ screen: SingleCustomer,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'Customer Info',
+      }
+    }
+  }
+})
+
+const CreditPointStack = createStackNavigator({
+  CreditPoint:{ screen: CreditPoint,
+    navigationOptions:({navigation})=>{
+      return{
+        headerTitle:'CreditPoint',
+        headerLeft:(
+          <Ionicons style={{paddingLeft:10}}
+           onPress={()=> navigation.openDrawer()}
+          name="md-menu" size={30}/>
+        )
+      }
+    }
+  },
+})
+
+const AppDashboardDrawerNavigator = createDrawerNavigator({
+    Dashboard:{ screen: DashboardStack},
+    AddCustomerDetails:{ screen: AddCustomerDetails},
+    Profile:{ screen: Profile},
+    PendingCustomers:{ screen: PendingCustomers},
+    CompletedCustomers:{ screen: CompletedCustomers},
+    CreditPoint: { screen: CreditPoint},
+    Notification: { screen: Notification},
+    Products: { screen: Products},
+    CashHistory:{ screen: CashHistory}
+  },{
+    initialRouteName: 'Profile',
+    drawerPosition: 'left',
+    contentComponent: CustomDrawerContentComponent,
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToggleRoute: 'DrawerToggle',
+  }
+)

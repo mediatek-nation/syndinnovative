@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "bankApp",
+    "slug": "bankApp",
+    "privacy": "public",
+    "sdkVersion": "33.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+        "bundleIdentifier": "com.bankApp.bankApp"
+    },
+    "android": {
+      "package": "com.bankApp.bankApp"
+    }
+  }
+}
